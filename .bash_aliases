@@ -29,3 +29,7 @@ v () { . ~/.local/"$1"/bin/activate ; }
 #   ------------------------------------------------------------
 showa () { /usr/bin/grep --color=always -i -a1 $@ ~/.bash_aliases | grep -v '^\s*$' | less -FSRXc ; }
 
+#   Start a virtualenv
+startvenv () { cd ~ && virtualenv $1 ; }
+#   Enter a virtualenv
+entervenv () { cd ~ && . ~/$1/bin/activate  ; }
